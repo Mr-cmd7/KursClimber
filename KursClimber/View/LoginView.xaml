@@ -1,0 +1,82 @@
+﻿<ui:UiWindow x:Class="KursClimber.View.LoginView"
+        xmlns:local="clr-namespace:KursClimber.View"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        mc:Ignorable="d"
+        Background="{ui:ThemeResource ApplicationBackgroundBrush}"
+        ExtendsContentIntoTitleBar="True"
+        SizeToContent="Height"
+        WindowBackdropType="Mica"
+        WindowCornerPreference="Round"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Title="LoginView" Height="450" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ui:TitleBar Grid.ColumnSpan="2" ShowMaximize="False" />
+        <TextBlock 
+            Grid.ColumnSpan="2"
+            FontSize="30"
+            FontWeight="Bold"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Grid.Row="1">
+            ChronicalClimber
+        </TextBlock>
+        <TextBlock
+            Grid.Row="2"
+            FontWeight="ExtraBold"
+            FontSize="20"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Grid.ColumnSpan="2">
+            Sing Up
+        </TextBlock>
+        <ui:TextBox 
+            Grid.Row="3"
+            Grid.ColumnSpan="2"
+            Icon="Person12"
+            Margin="50,10"
+            PlaceholderText="Login"
+            x:Name="LoginBox" />
+        <ui:PasswordBox
+            Grid.Row="4"
+            Grid.ColumnSpan="2"
+            Icon="Password16"
+            Margin="50,10"
+            PlaceholderText="Password"
+            x:Name="PasswordBox" />
+        <ui:Button
+            Command="{Binding LoginCommand}"
+            Appearance="Primary"
+            Content="Войти"
+            Grid.Row="5"
+            Grid.Column="1"
+            HorizontalAlignment="Stretch"
+            Margin="50,10" />
+        <ui:Button
+            Command="{Binding RegisterCommand}"
+            Appearance="Primary"
+            Content="Регистрация"
+            Grid.Row="5"
+            Grid.Column="0"
+            HorizontalAlignment="Stretch"
+            Margin="50,10"/>
+    </Grid>
+</ui:UiWindow>
+
