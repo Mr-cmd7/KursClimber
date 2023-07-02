@@ -37,14 +37,14 @@
                    FontSize="40" TextWrapping="Wrap" HorizontalAlignment="Center"
                    VerticalAlignment="Center" Margin="40" FontWeight="UltraBold"/>
         <ui:Button Margin="10" Grid.Row="2" Content="Горы" Icon="Flag24" FontSize="30"
-                   HorizontalAlignment="Center" Width="250" Height="150" Command="{Binding ClickOneCommand}" />
+                   HorizontalAlignment="Center" Width="250" Height="150" Command="{Binding MountainOpenCommand}" />
         <ui:Button Margin="10" Grid.Column="1" Grid.Row="2" FontSize="30" Content="Альпинисты" Icon="PeopleSearch20"
-                   HorizontalAlignment="Center" Width="250" Height="150" Command="{Binding ClickTwoCommand}" />
+                   HorizontalAlignment="Center" Width="250" Height="150" Command="{Binding ClimberOpenCommand}" />
         <ui:Button Margin="10" Grid.Column="2" FontSize="30" Grid.Row="2" Content="Группы" Icon="PeopleCommunity16"
-                   HorizontalAlignment="Center" Width="250" Height="150" Command="{Binding ClickThreeCommand}"/>
+                   HorizontalAlignment="Center" Width="250" Height="150" Command="{Binding GroupOpenCommand}"/>
         <ui:Button Grid.Column="2" FontSize="30" Grid.Row="4" Content="Выход" Icon="ArrowExit20"
                    HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Red"
-                   Width="150" Height="70" Margin="30" Command="{Binding ExitCommand}"/>
+                   Width="150" Height="70" Margin="30" Command="{Binding ExitLoginCommand}"/>
     </Grid>
 </ui:UiWindow>
 <!--<ui:Button Margin="10" Grid.Column="0" FontSize="30" Grid.Row="3" Content="Восхождения" Icon="WeatherSunny32"

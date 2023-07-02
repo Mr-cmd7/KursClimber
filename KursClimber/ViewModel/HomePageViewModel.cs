@@ -5,39 +5,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace KursClimber.ViewModel
 {
     public partial class HomePageViewModel
     {
-        
-
         [RelayCommand]
-        private void ClickOne(object obj)
+        private void ClimberOpen(object obj)
         {
             ClimberView climberView = new ClimberView();
             climberView.Show();
         }
         [RelayCommand]
-        private void ClickTwo(object obj)
+        private void GroupOpen(object obj)
         {
             ClimbingGroupView groupView = new ClimbingGroupView();
             groupView.Show();
         }
         [RelayCommand]
-        private void ClickThree(object obj)
+        private void MountainOpen(object obj)
         {
             MountainView mountainView = new MountainView();
             mountainView.Show();
         }
-        private HomePageView _window;
         [RelayCommand]
-        private void Exit(object obj)
+        private void ExitLogin(object obj)
         {
-            LoginView loginView = new LoginView();
-            loginView.Show();
-            _window.Close();
-
+                LoginView loginView = new LoginView();
+                loginView.Show();
         }
     }
 }
